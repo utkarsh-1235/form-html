@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>   
+    <link rel="stylesheet" href="./style.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+ <h2 id="form"align=center>Form</h2>   
+  <!--<style> 
+    #form,#name,#phoneno,#email,#dateofbirth,#writeaboutyoursel,#gender{
+        background-color:rgb(200,0,10);
+        border:4px solid black ;
+        border-radius:20px;
+        background-color:bisque
+    }
+ </style>-->
+ <form action="backend php" id="form">
+    <label for="name"></label>
+    <table>
+         
+        <div id="myname">
+           <label for="name">Name:</label>  <input type="text" name="Myname" id="name">
+        </div>
+        <br>
+        <div id="phoneno">
+           <label for="">Phone no.</label> :<input type="numeric" name="My Phone no.">
+        </div>
+        <br>
+        <div id="email">
+            Email: <input type="Email" name="My email"id="email1">
+        </div>
+        <br>
+        <div id="dateofbirth">
+            Date of Birth:<input type="date" name="id">
+        </div>
+        <br>
+        <div id="aadharnumber">
+            Aadhar Number:<input type="numeric" name="My Aadhar" id="aadhar1">
+        </div>
+        <br>
+
+        <br>
+
+        <div class="X-detail">
+            <h3 class="h3">Enter Your X detail</h3>
+            <div id="X-Board">
+               X Board :<input type="text" name="myText">
+            </div>
+            <div id="X-percentage">
+                X Board Percentage:<input type="numeric" name="myPercentage">
+             </div>
+        </div>
+        <br>
+        <div class="XII-detail">
+            <h3 class="h3">Enter Your XII detail</h3>
+            <div id="XII-Board">
+               XII Board :<input type="text" name="myText">
+            </div>
+            <div id="XII-percentage">
+                XII Board Percentage :<input type="numeric" name="myPercentage">
+             </div>
+        </div>
+        <br>
+        <div id="gender">
+            Gender:<Select name="My gender" id="gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="other">other</option>
+        </div>
+        <br>
+        <div>
+             Are you eligible?: <input type="checkbox" name="myEligibility">
+        </div>
+        <br>
+        <div id="writeaboutyourself">
+           Write about yourself: <textarea name="myText" cols="30" rows="10"></textarea>
+        </div>
+        <br>
+        <div class="sub-reset">
+            <div class="submit">
+                <input type="submit" value="Submit Now">
+            </div>   
+            <div class="reset">
+                <input type="reset" value="Reset Now">
+            </div>
+    
+        </div>
+    </table>
+</form>
+<p id="validation-message"></p>
+
+<script>
+    const form = document.querySelector("#form")
+    const email = form.querySelector("#email1")
+    const myAadhar = form.querySelector("#aadhar1")
+    const validateMessage = document.querySelector("#validation-message")
+    form.addEventListener("submit",function(event){
+        event.preventDefault()//prevent form submission
+
+        if(!email.value.includes("@")){
+            validateMessage.textContent = "Invalid email"
+            validateMessage.style.color = "red"
+            return
+        }
+        if(myAadhar.value.length<12){
+            validateMessage.textContent = "Invalid aadhar"
+            validateMessage.style.color = "red"
+        }
+        validateMessage.textContent = "valid mail"
+        validateMessage.style.color = "green"
+    })
+</script>
+</body>
+</html>

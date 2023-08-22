@@ -1,0 +1,53 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    border : 2px solid black;
+    width: 40%;
+    margin-left: 400px ;
+    text-align: left;
+    font-weight: 500;
+}
+#name input{
+    margin-left: 90px;
+}
+#phoneno input{
+    margin-left: 62px;
+}
+#email input{
+    margin-left: 90px;
+}
+#dateofbirth input{
+    margin-left: 42px;
+}
+#X-Board input{
+
+}
+#X-percentage input{
+
+}
+#XII-Board input{
+
+}
+#XII-percentage input{
+
+}
+
+.h3{
+    text-align: center;
+}
+.sub-reset{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.submit{
+ border: 2px solid black;
+ margin-left: 10px;
+}
+.reset{
+ border : 2px solid black;
+ margin-right: 10px;
+}
